@@ -11,7 +11,6 @@ const renderers = {
 
 const transform = (node, index) => {
   if (node.type === 'tag' && renderers[node.name]) {
-    console.log(node)
     return React.createElement(
       renderers[node.name],
       generatePropsFromAttributes(node.attribs, index),
