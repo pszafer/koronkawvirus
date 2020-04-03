@@ -48,17 +48,6 @@ module.exports = {
         // for wp-graphql-gutenberg, attributes currently breaks due
         // to the origin schema. It works if we exclude attributes
         excludeFields: [`attributes`],
-        plugins: [
-          {
-            resolve:  `gatsby-wordpress-inline-images`,
-            options: {
-              searchAndReplaceContentUrls: {
-                sourceUrl: "https://serwer2022301.home.pl/autoinstalator/wordpress(?!\/wp-content)",
-                replacementUrl: "http://localhost:8000",
-              }
-            }
-          }
-        ],
         schema: {
           queryDepth: 5,
           typePrefix: `Wp`,
