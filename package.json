@@ -1,0 +1,51 @@
+{
+  "name": "gatsby-koronkavirus",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Pawel Szafer <pszafer@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.20.10",
+    "gatsby-background-image": "^1.0.1",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-postcss": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-source-wordpress-experimental": "0.0.24",
+    "gatsby-transformer-sharp": "^2.4.3",
+    "moment-timezone": "^0.5.28",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.9.0",
+    "react-masonry-component": "^6.2.1",
+    "react-moment": "^0.9.7"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-plugins": "^0.3.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koronkawvirus/koronkawvirus"
+  },
+}

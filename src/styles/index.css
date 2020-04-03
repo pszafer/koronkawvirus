@@ -1,0 +1,57 @@
+@tailwind base;
+
+html, body {height: 100%;}
+
+body {
+    @apply bg-lightpurple;
+    
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto", "Oxygen","Ubuntu","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol"
+}
+
+card:hover {
+    cursor: pointer;
+}
+
+card .card-image {
+    opacity: 0.85;
+}
+
+card:hover .card-image {
+    @apply opacity-100;
+}
+
+card a:hover, article a:hover {
+    @apply underline;
+    @apply text-blue-800;
+}
+
+h1 {
+    @apply text-4xl;
+    @apply py-4;
+}
+
+h2 {
+    @apply text-2xl;
+    @apply py-2;
+}
+
+article p {
+    @apply py-2;
+    @apply font-normal;
+}
+
+article ul {
+    @apply list-disc;
+    @apply mx-2;
+    @apply pl-4;
+}
+
+article a {
+    @apply text-blue-600;
+}
+
+@tailwind components;
+@tailwind utilities;

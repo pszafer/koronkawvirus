@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg3926"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="koronka_ico.svg">
+  <defs
+     id="defs3920" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="106.78395"
+     inkscape:cy="196.85915"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="3840"
+     inkscape:window-height="2058"
+     inkscape:window-x="3840"
+     inkscape:window-y="54"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3923">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-38.945131,-144.03068)">
+    <path
+       d="m 47.960907,159.63569 18.361069,-12.58882 h 12.00785 l -22.3549,15.82442 23.857528,17.1737 H 66.756948 L 47.960907,166.32962 v 13.71537 h -9.015776 v -32.99812 h 9.015776 z"
+       id="path3876"
+       inkscape:connector-curvature="0"
+       style="fill:#999999;fill-rule:nonzero;stroke:none;stroke-width:0.84097636;stroke-linecap:square;stroke-miterlimit:10" />
+    <path
+       d="m 79.533411,194.03068 h -8.16042 L 58.248362,164.38471 h 7.820385 l 9.441108,22.30569 9.418463,-22.30569 h 7.820385 z"
+       id="path3878"
+       inkscape:connector-curvature="0"
+       style="fill:#980000;fill-rule:nonzero;stroke:none;stroke-width:0.77523708;stroke-linecap:square;stroke-miterlimit:10" />
+  </g>
+</svg>
