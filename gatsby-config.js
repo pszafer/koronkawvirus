@@ -48,6 +48,11 @@ module.exports = {
         // for wp-graphql-gutenberg, attributes currently breaks due
         // to the origin schema. It works if we exclude attributes
         excludeFields: [`attributes`],
+        plugins: [
+          {
+            resolve: `gatsby-wordpress-experimental-inline-images`,
+          }
+        ],
         schema: {
           queryDepth: 5,
           typePrefix: `Wp`,
@@ -75,6 +80,7 @@ module.exports = {
             limit: 5000
           },
         },
+      
       },
     },
     `gatsby-plugin-sitemap`,
