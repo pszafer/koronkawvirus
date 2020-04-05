@@ -6,7 +6,7 @@ export default ({social}) => (
     <div className="flex">
     {social.map(({url, icon}) => (
         url && icon ?
-        <a key={`social${url}`} href={url} target="_blank" className="bg-gray-400 mx-1 rounded-full h-12 w-12 flex items-center justify-center">
+        <a key={`social${url}`} href={url} target="_blank" rel="noopener noreferrer" className="bg-gray-400 mx-1 rounded-full h-12 w-12 flex items-center justify-center">
             <Icon icon={icon} />
         </a>
         :

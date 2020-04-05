@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 import Img from "gatsby-image"
 import Youtube from "../components/youtube"
 import ParseHtml from "../components/parsehtml"
@@ -10,7 +9,6 @@ class Post extends Component {
     const post = this.props.data.wpPost
     return (
       <>
-        <Layout title={post.title} mainColor="bg-white">
           <div className="w-2/3 float-left">
             <Header categories={post.categories} title={post.title} />
             <article
@@ -29,7 +27,6 @@ class Post extends Component {
               />
             )}
           </div>
-        </Layout>
       </>
     )
   }

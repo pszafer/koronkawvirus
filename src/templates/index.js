@@ -7,10 +7,9 @@ class Homepage extends Component {
   render() {
     const data = this.props.data
     const { currentPage, numPages } = this.props.pageContext
-    console.log(this.props)
     return (
       <>
-        <Main title={this.props.path} posts={data.allWpPost} currentPage={currentPage} numPages={numPages} />
+        <Main title={false} posts={data.allWpPost} currentPage={currentPage} numPages={numPages} />
       </>
     )
   }

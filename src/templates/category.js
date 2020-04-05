@@ -6,7 +6,6 @@ class Category extends Component {
   render() {
     const data = this.props.data
     const { currentPage, numPages } = this.props.pageContext
-    console.log(this.props)
     return (
       <>
         <Main posts={data.allWpPost} currentPage={currentPage} numPages={numPages} />
