@@ -7,7 +7,7 @@ import "moment/locale/pl"
 export default ({ node }) => {
   const { slug, featuredImage, categories, title, dateGmt } = node
   return (
-    <div className="card w-1/3 px-4 pt-4">
+    <div className="card xl:w-1/3 md:w-1/2 w-full px-4 pt-4">
       <div className="flex flex-col justify-center bg-white shadow-xl rounded-lg h-full">
         {featuredImage && (
           <Link to={`/${slug}`}>

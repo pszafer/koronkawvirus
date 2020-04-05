@@ -8,8 +8,15 @@ class Post extends Component {
   render() {
     const post = this.props.data.wpPost
     return (
-      <>
-          <div className="w-2/3 float-left">
+      <div className="lg:flex block lg:flex-row-reverse">
+          {post.featuredImage && (
+          <div className="lg:w-1/3 w-full pt-4 lg:pt-0">
+              <Img className="mx-auto lg:w-full w-3/4"
+                fluid={post.featuredImage.remoteFile.childImageSharp.fluid}
+              />
+          </div>
+          )}
+          <div className="lg:w-2/3 w-full">
             <Header categories={post.categories} title={post.title} />
             <article
               className="p-4"
@@ -20,14 +27,8 @@ class Post extends Component {
               <Youtube>{post.film.youtube_video}</Youtube>
             )}
           </div>
-          <div className="w-1/3 float-right">
-            {post.featuredImage && (
-              <Img
-                fluid={post.featuredImage.remoteFile.childImageSharp.fluid}
-              />
-            )}
-          </div>
-      </>
+          
+      </div>
     )
   }
 }

@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import SEO from "../components/parts/seo"
 
-import Sidebar from "./sidebar"
+import SideMenu from "../components/parts/sidemenu"
 
 class Layout extends React.Component {
 
@@ -25,9 +25,9 @@ class Layout extends React.Component {
       <>
          <>
           <SEO path={this.props.location.href} post={{...pageContext}} />
-          <div className="w-full mx-auto flex h-full">
-            <Sidebar />
-            <div className={mainColor + " w-3/4 p-4"}>{children}</div>
+          <div className="w-full mx-auto lg:flex h-full">
+            <SideMenu />
+            <div className={mainColor + " lg:w-3/4 lg:p-4 px-4"}>{children}</div>
           </div>
           </>
   

@@ -5,7 +5,7 @@ import Pagination from "../components/parts/pagination"
 
 export default ({posts, currentPage, numPages, title}) => (
     <>
-          <div className="flex flex-wrap main-index -mx-2 pt-6">
+          <div className="flex flex-wrap main-index -mx-2 lg:pt-6">
             {posts.edges.map(({ node }) => (
               <Card key={`card${node.slug}`} node={node} />
             ))}
