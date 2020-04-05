@@ -20,11 +20,11 @@ class Layout extends React.Component {
   render() {
     const { children, pageContext } = this.props;
     const mainColor = pageContext.pageName ? "bg-white" : "bg-lightpurple"
-    const title = pageContext.pageName ? pageContext.pageName : ""
+    console.log(this.props)
     return (
       <>
          <>
-          <SEO title={title} />
+          <SEO path={this.props.location.href} post={{...pageContext}} />
           <div className="w-full mx-auto flex h-full">
             <Sidebar />
             <div className={mainColor + " w-3/4 p-4"}>{children}</div>

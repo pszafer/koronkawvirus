@@ -5,7 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
     sitelogo: `koronka_logo.svg`,
     wordpressUrl: `https://serwer2022301.home.pl/autoinstalator/wordpress`,
-    siteUrl: `http://localhost:8000`,
+    siteUrl: `https://koronkavirus.pl`,
     social: [
       {
         "icon": "facebook",

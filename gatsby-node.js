@@ -14,6 +14,16 @@ exports.createPages = async ({ graphql, actions }) => {
             id
             slug
             title
+            excerpt
+            featuredImage {
+              remoteFile {
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -57,13 +67,16 @@ exports.createPages = async ({ graphql, actions }) => {
   })  
 
   const postTemplate = path.resolve(`./src/templates/post.js`)
-  posts.forEach(edge => {
+  posts.forEach(({node}) => {
     createPage({
-      path: edge.node.slug,
+      path: node.slug,
       component: slash(postTemplate),
       context: {
-        id: edge.node.id,
-        pageName: edge.node.title
+        id: node.id,
+        pageName: node.title,
+        description: node.excerpt,
+        image: node.featuredImage.remoteFile.childImageSharp.fixed.src,
+        pageType: "post"
       },
     })
   })
