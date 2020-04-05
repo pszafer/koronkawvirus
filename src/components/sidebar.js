@@ -19,7 +19,7 @@ export default () => {
               </div>
               <hr className="my-2 border-gray-600" />
               <div className="text-gray-700 italic text-s my-4">
-                W obliczu pandemii koronawirusa zdecydowaliśmy się na...
+                Koronką w wirusa!
               </div>
               <div className="mt-2 p-4">
                 <Categories />

@@ -11,19 +11,24 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto", "Oxygen","Ubuntu","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji", "Segoe UI Emoji","Segoe UI Symbol"
 }
 
-card:hover {
+.card:hover {
     cursor: pointer;
 }
 
-card .card-image {
+.card .card-image {
     opacity: 0.85;
+    @apply w-full;
+    height: 200px;
+    background: #c5d2d9 no-repeat 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
-card:hover .card-image {
+.card:hover .card-image {
     @apply opacity-100;
 }
 
-card a:hover, article a:hover {
+.card a:hover, article a:hover {
     @apply underline;
     @apply text-blue-800;
 }

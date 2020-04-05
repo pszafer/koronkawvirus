@@ -1,21 +1,15 @@
 import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import Img from "gatsby-image"
-import Card from "../components/card"
+import Main from "../components/main"
 
 class Category extends Component {
   render() {
     const data = this.props.data
+    const { currentPage, numPages } = this.props.pageContext
+    console.log(this.props)
     return (
       <>
-        <Layout mainColor="bg-lightpurple">
-          <div className="flex main-index">
-            {data.allWpPost.edges.map(({ node }) => (
-              <Card key={node.slug} node={node} />
-            ))}
-          </div>
-        </Layout>
+        <Main posts={data.allWpPost} currentPage={currentPage} numPages={numPages} />
       </>
     )
   }
@@ -24,9 +18,12 @@ class Category extends Component {
 export default Category
 
 export const postCategoryQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $skip: Int!, $limit: Int!) {
     allWpPost(
       filter: { categories: {nodes : { elemMatch: { id: { eq: $id } } } } }
+      sort: { fields: [date], order: DESC }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

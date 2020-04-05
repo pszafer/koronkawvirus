@@ -10,7 +10,7 @@ class Post extends Component {
     const post = this.props.data.wpPost
     return (
       <>
-        <Layout mainColor="bg-white">
+        <Layout title={post.title} mainColor="bg-white">
           <div className="w-2/3 float-left">
             <Header categories={post.categories} title={post.title} />
             <article
@@ -40,7 +40,7 @@ const Header = ({ categories, title }) => (
     <div className="w-2/3">
       <h1 className="font-bold" dangerouslySetInnerHTML={{ __html: title }} />
       {categories.nodes.map(({ name }) => (
-        <span key={name} className="items-end bg-gray-400 p-1 rounded-lg">
+        <span key={`post_cat${name}`} className="items-end bg-gray-400 p-1 rounded-lg">
           {name}
         </span>
       ))}

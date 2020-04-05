@@ -6,9 +6,9 @@ export default () => {
     const { allWpCategory } = useCategories()
     return (
       <>
-        <MenuLink slug="/" name="Strona główna" />
+        <MenuLink key="sidehome" slug="/" name="Strona główna" />
           {allWpCategory.edges.map(({ node }) => (
-            <MenuLink key={node.slug} slug={node.slug} name={node.name} />
+            <MenuLink key={`cat${node.slug}`} slug={`/${node.slug}`} name={node.name} />
           )
         )}
         </>
@@ -16,7 +16,7 @@ export default () => {
 }
 
 const MenuLink = ({slug, name}) => (
-    <div className="p-1">
+    <div key={`cat${slug}`} className="p-1">
         <Link to={slug}>
             <span className="text-gray-800 text-xl"><b className="text-gray-500 mr-1">></b>{name}</span>
         </Link>

@@ -1,26 +1,16 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Card from "../components/card"
-import Pagination from "../components/pagination"
+import Main from "../components/main"
 
 
 class Homepage extends Component {
   render() {
     const data = this.props.data
     const { currentPage, numPages } = this.props.pageContext
+    console.log(this.props)
     return (
       <>
-        <Layout mainColor="bg-lightpurple">
-          <div className="flex flex-wrap main-index -mx-2 pt-6">
-            {data.allWpPost.edges.map(({ node }) => (
-              <Card key={node.slug} node={node} />
-            ))}
-            {numPages > 1 && (
-              <Pagination currentPage={currentPage} numPages={numPages} />
-            )}
-          </div>
-        </Layout>
+        <Main title={this.props.path} posts={data.allWpPost} currentPage={currentPage} numPages={numPages} />
       </>
     )
   }

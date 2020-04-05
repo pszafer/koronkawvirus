@@ -7,17 +7,19 @@ import "moment/locale/pl"
 export default ({ node }) => {
   const { slug, featuredImage, categories, title, dateGmt } = node
   return (
-    <div className=" w-1/3 px-4 pt-4">
+    <div className="card w-1/3 px-4 pt-4">
       <div className="flex flex-col justify-center bg-white shadow-xl rounded-lg h-full">
         {featuredImage && (
+          <Link to={`/${slug}`}>
           <Img
             className="card-image rounded-t-lg"
             fluid={featuredImage.remoteFile.childImageSharp.fluid}
-          />
+            />
+          </Link>
         )}
         <div className="flex flex-col p-2 ">
           <div className="flex-1 justify-start">
-            <Link to={slug}>
+            <Link to={`/${slug}`}>
               <h2 dangerouslySetInnerHTML={{ __html: title }} />
             </Link>
           </div>
@@ -32,7 +34,7 @@ export default ({ node }) => {
             <div className="w-1/2 flex p-1 justify-end">
               {categories.nodes.map(({ name }) => (
                 <span
-                  key={name}
+                  key={`card_cat${name}`}
                   className="items-end bg-gray-400 p-1 rounded-lg"
                 >
                   {name}

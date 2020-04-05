@@ -8,10 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import SEO from "../components/parts/seo"
 
 import Sidebar from "./sidebar"
 
-const Layout = ({ children, mainColor }) => {
+const Layout = ({ children, mainColor, title }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,6 +26,7 @@ const Layout = ({ children, mainColor }) => {
   return (
     <>
        <>
+        <SEO title={title} />
         <div className="w-full mx-auto flex h-full">
           <Sidebar />
           <div className={mainColor + " w-3/4 p-4"}>{children}</div>
