@@ -75,7 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
         id: node.id,
         pageName: node.title,
         description: node.excerpt,
-        image: node.featuredImage.remoteFile.childImageSharp.fixed.src,
+        image: node.featuredImage && node.featuredImage.remoteFile.childImageSharp.fixed.src || false,
         pageType: "post"
       },
     })
